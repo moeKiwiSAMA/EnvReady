@@ -7,12 +7,12 @@ This image contains common utils I use everyday.
 ### Cli Only
 
 ```bash
-docker run -it moekiwisama/envready:latest
+docker run -it -w /root moekiwisama/envready:latest
 ```
 
 
 ### With Xserver
 
 ```bash
-docker run --rm -it --net=host -e DISPLAY -v $HOME/.Xauthority:/root/.Xauthority moekiwisama/envready:latest
+docker run --rm -it -w /root --net=host -e DISPLAY -v $HOME/.Xauthority:/root/.Xauthority moekiwisama/envready:latest
 ```
