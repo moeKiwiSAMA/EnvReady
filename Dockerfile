@@ -3,7 +3,7 @@ FROM ubuntu:21.04
 # apt install basic apps
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update && apt upgrade -y
-RUN apt install vim zsh tmux sudo git wget curl tmux build-essential -y
+RUN apt install vim zsh tmux sudo git wget curl tmux -y
 
 # config zsh with zsh-autosuggestions and starship
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
