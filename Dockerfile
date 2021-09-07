@@ -15,7 +15,7 @@ RUN echo "eval \"\$(starship init zsh)\"" >> ~/.zshrc
 RUN echo $PROXY_COMMANDS >> ~/.zshrc
 
 # install kitty terminal
-RUN apt install kitty -y
+RUN apt install kitty libgl-dev -y
 RUN eval $PROXY_COMMANDS && wget https://raw.githubusercontent.com/dexpota/kitty-themes/master/themes/ayu_mirage.conf -P ~/.config/kitty/
 
 RUN echo "include ./kitty-themes/themes/ayu_mirage.conf" >> ~/.config/kitty/kitty.conf
